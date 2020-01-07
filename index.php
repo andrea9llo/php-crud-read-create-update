@@ -10,14 +10,30 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="contenitore">
+      <h2>Aggiungere una nuova configurazione</h2>
+      <form id="my_form">
+        <label for="title">title</label>
+        <input type="text" name="title" value=""><br>
+        <label for="description">description</label>
+        <input type="text" name="description" value=""><br>
+        <input type="submit" name="submit" value="invio">
+      </form>
+    </div>
 
-    <form id="my_form">
-      <label for="title">title</label>
-      <input type="text" name="title" value=""><br>
-      <label for="description">description</label>
-      <input type="text" name="description" value=""><br>
-      <input type="submit" name="submit" value="invio">
-    </form>
+    <div class="contenitore">
+      <h2>Aggiornamento di una configurazione</h2>
+      <form id="my_form2">
+        <label for="title">title</label>
+        <input type="text" name="title" value=""><br>
+        <label for="description">description</label>
+        <input type="text" name="description" value=""><br>
+        <label for="id">id</label>
+        <input type="text" name="id" value=""><br>
+        <input type="submit" name="submit" value="invio">
+      </form>
+    </div>
+
 
     <div class="container">
 

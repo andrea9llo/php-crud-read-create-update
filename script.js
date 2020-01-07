@@ -46,7 +46,26 @@ function putNewConf() {
   });
   return false;
 }
+function getUpdateConf() {
+  var me = $(this);
+  $.ajax({
+    url: "getUpdateConf.php",
+    method: "POST",
+    data: me.serialize(),
+    success: function(data){
+      if(data){
+        getConfigurazioni();
+      }
+      console.log("data",data);
+    },
+    error: function(error){
+      console.log("error",error);
+    }
+  });
+  return false;
+}
 $(document).ready(function(){
   getConfigurazioni();
   $("#my_form").submit(putNewConf);
+  $("#my_form2").submit(getUpdateConf);
 });
