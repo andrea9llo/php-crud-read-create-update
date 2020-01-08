@@ -43,7 +43,8 @@
     <!-- blocco template -->
     <script id="entry-template" type="text/x-handlebars-template">
       <div class="configurazioni">
-        <p>{{title}}</p>
+        <input class="deleteConf" type="button" name="" value="delete" data-id="{{id}}">
+        <p>{{id}} {{title}}</p>
         <p>{{description}}</p>
       </div>
 

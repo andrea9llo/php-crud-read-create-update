@@ -64,8 +64,29 @@ function getUpdateConf() {
   });
   return false;
 }
+function deleteConf() {
+
+  var me = $(this);
+  var id = me.data('id');
+  $.ajax({
+    url: "deleteConf.php",
+    method: "POST",
+    data: { id: id},
+    success: function(data){
+      if(data){
+        getConfigurazioni();
+      }
+      console.log("data",data);
+    },
+    error: function(error){
+      console.log("error",error);
+    }
+  });
+
+}
 $(document).ready(function(){
   getConfigurazioni();
+  $(this).on("click",".deleteConf",deleteConf);
   $("#my_form").submit(putNewConf);
   $("#my_form2").submit(getUpdateConf);
 });
